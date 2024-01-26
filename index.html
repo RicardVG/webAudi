@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descubre la potencia y elegancia del Audi R8 en nuestra página dedicada a la expºeriencia única de este icónico automóvil deportivo.">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/jpg" href="img/favicon.ico">
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <img class="styleAudi" src="img/audi.png">
+      <h1>Audi R8</h1>
+    </header>
+
+
+      <section class="section">
+        <video autoplay muted loop>
+          <source src="video/Audi R8 Night Drive _ Estonia, Tallinn [ 4K ].mp4" type="video/mp4">
+          Tu navegador no soporta el tag de video.
+        </video>
+  
+     
+          <div class="content">
+            <div class="text">
+              <h1>¡Descubre la Emoción de la Velocidad con el Nuevo Audi R8!</h1>
+            </div>
+          </div>
+  
+
+      </section>
+    
+      <aside class="aside">
+        <div class="cardForm">
+          <div class="beneficios">
+            <p>¡Recibe hasta un 20% de descuento al reservar el nuevo Audi R8 <br> y 4 años de Garantía a Todo Riesgo! </p>
+          </div>
+          <div class="insideForm">
+    
+            <form>
+              <label for="usuario" class="labelsForm">Nombre:</label>
+              <input type="text"  name="usuario" id="usuario"  placeholder="Pon tu nombre"  oninput="validarEntradaText(this.value)" required>
+
+              <label for="email" class="labelsForm">Email:</label>
+              <input type="email" name="email" id="email" placeholder="Pon tu email" oninput="validarEntradaEmail(this.value)" required>
+
+              <label for="tel" class="labelsForm">Teléfono:</label>
+              <input type="tel" name="tel" id="tel" placeholder="Pon tu teléfono" maxlength="9"  oninput="validarEntradaTelefono(this.value)" required>
+
+            </form>
+          
+            <button class="styleButton">  <img width="30px" src="img/calendario.png" alt="Calendario">RESÉRVALO YA</button>
+          </div>
+      </div>
+      </aside>
+     
+
+    <footer>
+      <div class="generalFooter">
+        <div class="rating-container">
+          <h2>Valoraciones</h2>
+          <div class="stars">
+            <div class="star">
+              &#9733;
+              &#9733;
+              &#9733;
+              &#9733;
+              &#9733;
+            </div>
+        
+            <h3>Jeffrey Anderson</h3>
+          </div>
+          <div class="stars">
+            <div class="star">
+              &#9733;
+              &#9733;
+              &#9733;
+              &#9733;
+              &#9733;
+            </div>
+            <h3>Katy Smith</h3>
+          </div>
+        </div>
+        <div class="separator"></div>
+        <div class="textoValoraciones">
+          <h5>Lo que más me ha gustado del coche es su sonido, el rugido del motor V10 es una auténtica obra de arte. 100% recomendable.</h5>
+          <br>
+          <h5>Es increible su capacidad para generar emociones. Es un coche que te hace sentir vivo y que te hace querer conducirlo durante horas. No os decepcionará.</h5>
+        </div>
+        <div class="separator"></div>
+        <div class="redesSociales">
+          <img class="sizeRedesSociales" src="img/facebook_icon.png" alt="Facebook Icon">
+          <img class="sizeRedesSociales" src="img/instagram_icon.png" alt="Instagram Icon">
+          <img class="sizeRedesSociales" src="img/twitter-icon.png" alt="Twitter Icon">
+          <img class="sizeRedesSociales" src="img/youtube_icon.png" alt="Youtube Icon">
+        </div>
+
+      </div>
+    
+    </footer>
+  </div>
+
+  <script>
+    function validarEntradaText(valor) {
+      var inputUsuario = document.getElementById('usuario');
+
+      // Verificar si la entrada es texto
+      if (/^[a-zA-Z]+$/.test(valor)) {
+        // Es texto, es válido
+        inputUsuario.classList.remove('invalid');
+        inputUsuario.classList.add('valid');
+      } else {
+        // No es texto, es inválido
+        inputUsuario.classList.remove('valid');
+        inputUsuario.classList.add('invalid');
+      }
+    }
+
+    function validarEntradaEmail(valor){
+      var inputEmail = document.getElementById('email');
+          // Verificar si la entrada es un formato de correo electrónico válido
+        if (/^\S+@\S+\.\S+$/.test(valor)) {
+          // Es un correo electrónico válido
+          inputEmail.classList.remove('invalid');
+          inputEmail.classList.add('valid');
+        } else {
+          // No es un correo electrónico válido
+          inputEmail.classList.remove('valid');
+          inputEmail.classList.add('invalid');
+        }
+
+    }
+      
+    function validarEntradaTelefono(valor) {
+            var inputTelefono = document.getElementById('tel');
+
+            // Verificar si la entrada es un número de teléfono válido (9 números del 1 al 9)
+            if (/^[1-9]{9}$/.test(valor)) {
+                // Es un número de teléfono válido
+                inputTelefono.classList.remove('invalid');
+                inputTelefono.classList.add('valid');
+            } else {
+                // No es un número de teléfono válido
+                inputTelefono.classList.remove('valid');
+                inputTelefono.classList.add('invalid');
+            }
+        }
+    
+</script>
+
+</body>
+
+</html>
